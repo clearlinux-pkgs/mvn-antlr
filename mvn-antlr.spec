@@ -4,7 +4,7 @@
 #
 Name     : mvn-antlr
 Version  : 2.7.2
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/antlr/antlr/2.7.2/antlr-2.7.2.jar
 Source0  : https://repo1.maven.org/maven2/antlr/antlr/2.7.2/antlr-2.7.2.jar
 Source1  : https://repo1.maven.org/maven2/antlr/antlr/2.7.2/antlr-2.7.2.pom
@@ -31,17 +31,17 @@ data components for the mvn-antlr package.
 %build
 
 %install
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/r/2.7.2
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/antlr/r/2.7.2
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.2
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.2
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/r/2.7.2
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/antlr/r/2.7.2
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.2
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.2
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/r/2.7.7
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/antlr/r/2.7.7
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.7
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.7
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/r/2.7.7
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/antlr/r/2.7.7
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.7
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.7
 
 
 %files
@@ -49,7 +49,7 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/antlr/r/2.7.7
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/java/.m2/repository/antlr/r/2.7.2/antlr-2.7.2.jar
-/usr/share/java/.m2/repository/antlr/r/2.7.2/antlr-2.7.2.pom
-/usr/share/java/.m2/repository/antlr/r/2.7.7/antlr-2.7.7.jar
-/usr/share/java/.m2/repository/antlr/r/2.7.7/antlr-2.7.7.pom
+/usr/share/java/.m2/repository/antlr/antlr/2.7.2/antlr-2.7.2.jar
+/usr/share/java/.m2/repository/antlr/antlr/2.7.2/antlr-2.7.2.pom
+/usr/share/java/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar
+/usr/share/java/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.pom
