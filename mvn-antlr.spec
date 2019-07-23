@@ -4,18 +4,20 @@
 #
 Name     : mvn-antlr
 Version  : 2.7.2
-Release  : 4
+Release  : 5
 URL      : https://repo1.maven.org/maven2/antlr/antlr/2.7.2/antlr-2.7.2.jar
 Source0  : https://repo1.maven.org/maven2/antlr/antlr/2.7.2/antlr-2.7.2.jar
-Source1  : https://repo1.maven.org/maven2/antlr/antlr/2.7.2/antlr-2.7.2.pom
-Source2  : https://repo1.maven.org/maven2/antlr/antlr/2.7.7/antlr-2.7.7.jar
-Source3  : https://repo1.maven.org/maven2/antlr/antlr/2.7.7/antlr-2.7.7.pom
-Source4  : https://repo1.maven.org/maven2/org/antlr/antlr-master/3.3/antlr-master-3.3.pom
-Source5  : https://repo1.maven.org/maven2/org/antlr/antlr-master/3.4/antlr-master-3.4.pom
-Source6  : https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.jar
-Source7  : https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.pom
-Source8  : https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar
-Source9  : https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.pom
+Source1  : https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar
+Source2  : https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.pom
+Source3  : https://repo1.maven.org/maven2/antlr/antlr/2.7.2/antlr-2.7.2.pom
+Source4  : https://repo1.maven.org/maven2/antlr/antlr/2.7.7/antlr-2.7.7.jar
+Source5  : https://repo1.maven.org/maven2/antlr/antlr/2.7.7/antlr-2.7.7.pom
+Source6  : https://repo1.maven.org/maven2/org/antlr/antlr-master/3.3/antlr-master-3.3.pom
+Source7  : https://repo1.maven.org/maven2/org/antlr/antlr-master/3.4/antlr-master-3.4.pom
+Source8  : https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.jar
+Source9  : https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.pom
+Source10  : https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar
+Source11  : https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : ANTLR-PD BSD-3-Clause
@@ -38,34 +40,40 @@ data components for the mvn-antlr package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.2
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.2
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.2/antlr-2.7.2.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.5.2
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.5.2
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.2
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.2
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.2/antlr-2.7.2.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.7
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.7
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.7
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.7
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-master/3.3
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-master/3.3
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-master/3.3/antlr-master-3.3.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-master/3.4
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-master/3.4
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-master/3.4/antlr-master-3.4.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.3
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.3
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.3
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.3
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.4
-cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.4
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.4
-cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.4
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.pom
 
 
 %files
@@ -83,3 +91,5 @@ cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/antlr/antlr-runtime
 /usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.pom
 /usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar
 /usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.pom
+/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar
+/usr/share/java/.m2/repository/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.pom
